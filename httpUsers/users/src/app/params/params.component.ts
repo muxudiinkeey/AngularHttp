@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UserService } from '../users/user.service';
 import { Iusers } from '../users/user';
 import { CommonModule } from '@angular/common';
+import { UserParamsService } from './user-params.service';
 
 @Component({
   selector: 'app-params',
@@ -13,18 +14,22 @@ export class ParamsComponent {
 
 
 
-  userservice = inject (UserService)
+  userParamssirvice= inject (UserParamsService)
   
     users: Iusers[]= []
   
     ngOnInit(): void {
       this.onGitUsers();
     }
-   users$ = this.userservice.getUsers();
+   users$ = this.userParamssirvice.getUsers();
   onGitUsers(){
-    this.userservice.getUsers().subscribe((Iusers)=>{
+    this.userParamssirvice.getUsers().subscribe((users)=>{
       this.users= this.users
     })
+  }
+
+  getUserParams(){
+  
   }
 
 }
