@@ -26,14 +26,7 @@ export class HomeComponent {
       });
     }
   
- /*    ngOnInit(): void {
-      this.onGitUsers();
-    } */
-   users$ = this.userservice.getUsers();
-  onGitUsers(){
-    this.userservice.getUsers().subscribe((Iusers)=>{
-      this.users= this.users
-    })
+
   }
 
-}
+
