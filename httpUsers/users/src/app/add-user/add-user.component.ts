@@ -17,10 +17,14 @@ userservice = inject (UserService)
   ngOnInit(): void {
     this.onGitUsers();
   }
- users$ = this.userservice.getUsers();
+  // asynk hadaad isticmaalaysid dollor users isticmaal
+  //  users$ = this.userservice.getUsers();
+
 onGitUsers(){
   this.userservice.getUsers().subscribe((Iusers)=>{
-    this.users= this.users
+    
+    // this.users= this.users
+    this.users= Iusers;
   })
 }
 }
