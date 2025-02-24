@@ -18,13 +18,13 @@ userservice = inject (UserService)
     this.onGitUsers();
   }
   // asynk hadaad isticmaalaysid dollor users isticmaal
-  //  users$ = this.userservice.getUsers();
+   users$ = this.userservice.getUsers();
 
 onGitUsers(){
   this.userservice.getUsers().subscribe((Iusers)=>{
-    
-    // this.users= this.users
-    this.users= Iusers;
+
+    this.users= this.users
+    // this.users= Iusers;
   })
 }
 }
