@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Iuser } from './user';
+import { Ipost } from './post';
 
 @Component({
   selector: 'app-root',
@@ -15,19 +15,20 @@ export class AppComponent {
 private url='http://jsonplaceholder.typicode.com/posts';
 
 http = inject(HttpClient);
-user : any;
-users : Iuser []= []
+
+post : any;
+posts : Ipost []= []
 
 
 $posts = this.getPosts();
 // GET
 getPosts(){
-  return this.http.get<Iuser[]>(this.url)
+  return this.http.get<Ipost[]>(this.url)
 }
 
 getPost(id: number ){
 
-  return this.http.get<Iuser[]>(this.url+'/'+id);
+  return this.http.get<Ipost[]>(this.url+'/'+id);
 }
 
 /* // CREATE

@@ -1,4 +1,4 @@
-export interface Iuser {
+export interface Ipost {
     "id": number,
     "userId": number,
     "title": string,
