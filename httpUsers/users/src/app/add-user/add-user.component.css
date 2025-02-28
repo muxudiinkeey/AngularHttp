@@ -5,3 +5,11 @@
 .delete-user {
     margin-left: 10px;
 }
+
+.container {
+    margin-top: 25px;
+}
+thead {
+   color: rgb(124, 120, 120); 
+}
+
