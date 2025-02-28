@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../users/user.service';
 import { Iusers } from '../users/user';
 
@@ -9,24 +9,29 @@ import { Iusers } from '../users/user';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
     userservice = inject (UserService)
   
     users: Iusers[]= []
 
-    constructor(){
+    constructor(){}
+  ngOnInit(): void {
+    this.onGetusers();
+  }
+
+    onGetusers(){
       this.userservice.getUsers().subscribe({
     next:(data)=>{
       this.users = data;
     },
-    error:(err)=>{
+    error:(err: any)=>{
  console.log(err);
     }
       });
     }
   
-
+  
   }
 
 
