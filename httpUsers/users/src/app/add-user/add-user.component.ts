@@ -23,8 +23,8 @@ userservice = inject (UserService)
 onGitUsers(){
   this.userservice.getUsers().subscribe((Iusers)=>{
 
-    this.users= this.users
-    // this.users= Iusers;
+    //this.users= this.users
+    this.users= Iusers;
   })
 }
 }
