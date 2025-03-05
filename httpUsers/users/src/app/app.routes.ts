@@ -5,9 +5,9 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { ParamsComponent } from './params/params.component';
 
 export const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '', pathMatch: 'full', redirectTo: 'users' },
     { path: 'home', component: HomeComponent },
-    { path: 'users/:id', component: UsersComponent },
+    { path: 'users', component: UsersComponent },
     { path: 'addUser', component: AddUserComponent },
     { path: 'params', component: ParamsComponent },
 ];

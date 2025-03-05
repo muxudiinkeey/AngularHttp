@@ -1,9 +1,7 @@
-import { Component,inject, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import {  RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CommonModule } from '@angular/common';
-import { UserService } from './users/user.service';
-import { Iuser } from './users/user';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +9,17 @@ import { Iuser } from './users/user';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
-  title = 'users';
-userService = inject(UserService)
+export class AppComponent {
+
+
+  
+  
+
+
+
+
+
+/* userService = inject(UserService)
   user: any;
  Users : Iuser[]=[]
 
@@ -52,5 +58,5 @@ ngOnInit(): void {
       (error:any) =>console.warn(error),
       ()=> console.log('Done creating user')
     )
-  }
+  } */
 }
