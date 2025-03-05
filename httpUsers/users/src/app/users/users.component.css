@@ -1,3 +1,15 @@
-div.card{
-    background-color: rgb(250, 246, 246);
+.row {
+    background-color:rgb(184, 221, 179)
 }
+
+.delete-user {
+    margin-left: 10px;
+}
+
+.container {
+    margin-top: 25px;
+}
+thead {
+   color: rgb(124, 120, 120); 
+}
+
