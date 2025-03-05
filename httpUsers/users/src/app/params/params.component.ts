@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../users/user.service';
-import { Iusers } from '../users/user';
+import { Iuser} from '../users/user';
 import { CommonModule } from '@angular/common';
 import { UserParamsService } from './user-params.service';
 
@@ -16,7 +16,7 @@ export class ParamsComponent {
 
   userParamssirvice= inject (UserParamsService)
   
-    users: Iusers[]= []
+    users: Iuser[]= []
   
     ngOnInit(): void {
       this.onGitUsers();

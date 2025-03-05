@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../users/user.service';
-import { Iusers } from '../users/user';
+import { Iuser } from '../users/user';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class AddUserComponent {
 userservice = inject (UserService)
 
-  users: Iusers[]= []
+  users: Iuser[]= []
 
   ngOnInit(): void {
     this.onGitUsers();
@@ -21,10 +21,10 @@ userservice = inject (UserService)
    users$ = this.userservice.getUsers();
 
 onGitUsers(){
-  this.userservice.getUsers().subscribe((Iusers)=>{
+  this.userservice.getUsers().subscribe((Iuser)=>{
 
     //this.users= this.users
-    this.users= Iusers;
+    this.users= Iuser;
   })
 }
 }

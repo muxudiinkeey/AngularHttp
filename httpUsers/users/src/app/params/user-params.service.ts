@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Iusers } from '../users/user';
+import { Iuser} from '../users/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class UserParamsService {
   //users : Iusers [] = []
  
    getUsers(){
-    return this.http.get<Iusers[]>(this.Url)
+    return this.http.get<Iuser[]>(this.Url)
    }
  
 }

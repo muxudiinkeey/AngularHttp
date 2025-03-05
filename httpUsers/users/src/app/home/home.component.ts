@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../users/user.service';
-import { Iusers } from '../users/user';
+import { Iuser} from '../users/user';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
     userservice = inject (UserService)
   
-    users: Iusers[]= []
+    users: Iuser[]= []
 
     constructor(){}
   ngOnInit(): void {
