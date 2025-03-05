@@ -20,6 +20,7 @@ userService = inject(UserService)
 
 ngOnInit(): void {
     this.onGetusers();
+    this.onGetuser();
     
 }
 
@@ -28,14 +29,14 @@ ngOnInit(): void {
       (response) => console.table(response),
       
       (error:any) =>console.warn(error),
-      ()=> console.log('Done getting users')
+      ()=> console.log('liiska oo dhan users')
     )
   }
   onGetuser(){
     this.userService.getUser().subscribe(
-      (response) => console.table(response),
+      (response) => console.info(response),
       (error:any) =>console.warn(error),
-      ()=> console.log('Done geting user')
+      ()=> console.log('Waa hal user')
     )
   }
   onCreateUsser(user: Iuser){
