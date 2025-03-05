@@ -1,4 +1,12 @@
 
-.col-10 {
-    background-color:rgb(243, 241, 238);
+.row {
+    background-color:rgb(225, 209, 221)
 }
+
+.delete-user {
+    margin-left: 10px;
+}
+
+
+
+
