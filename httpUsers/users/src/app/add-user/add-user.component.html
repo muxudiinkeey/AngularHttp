@@ -31,8 +31,14 @@
                >
           </div>
           
-          <button type="submit" class="btn btn-light">Add-User</button>
-      <span class="delete-user">   <button type="submit" class="btn btn-light ">Delete-User</button></span>
+          <button type="submit" class="btn btn-light"
+          (click)="onAddUser()"
+          >Add-User</button>
+
+      <span class="delete-user">
+           <button type="submit"
+            class="btn btn-light"
+            (click)="onupdateUser()">update-User</button></span>
         </form>
       </div>
       </div>

@@ -22,6 +22,8 @@ addUserService = inject (UserService)
    
   ngOnInit(): void {
     this.onGitUsers();
+    this.onAddUser();
+   // this.onGitUser();
   }
   // asynk hadaad isticmaalaysid dollor users isticmaal
    users$ = this.addUserService.getUsers();
@@ -31,10 +33,22 @@ onGitUsers(){
 
     //this.users= this.users
     this.users= Iuser;
+    console.table(this.users);
+  })
+}
+onGitUser(){
+  this.addUserService.getUser().subscribe((Iuser)=>{
+
+    this.users= this.users
+    //this.users= Iuser;
+    console.log(this.users);
   })
 }
 
 onAddUser(){
 console.log(this.userForm.value);
+}
+onupdateUser(){
+
 }
 }
