@@ -18,7 +18,7 @@ homeService = inject (HomeService)
 
   ngOnInit(): void {
     this.onGetusers();
-    this.onGetusers();
+    this.onGetuser();
   }
 
 
