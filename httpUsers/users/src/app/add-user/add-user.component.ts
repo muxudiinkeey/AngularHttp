@@ -35,6 +35,6 @@ onGitUsers(){
 }
 
 onAddUser(){
-
+console.log(this.userForm.value);
 }
 }
