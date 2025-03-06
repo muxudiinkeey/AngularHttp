@@ -11,10 +11,7 @@ export class HomeService {
  http = inject (HttpClient);
   
  
-constructor(){
-  this.getUsers();
-  this.getUser();
-}
+
 
  getUsers(): Observable<Iuser[]>{
 
@@ -25,5 +22,9 @@ return this.http.get<Iuser[]>('https://jsonplaceholder.typicode.com/users');
 
 return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/2');
  }
+
+ createUser(user: Iuser):Observable<Iuser>{
+  return this.http.post<Iuser>('https://jsonplaceholder.typicode.com/users ', user);
+}
 
 }

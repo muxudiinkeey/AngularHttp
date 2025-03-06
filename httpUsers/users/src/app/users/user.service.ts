@@ -22,9 +22,11 @@ export class UserService {
    return this.http.get<Iuser>(`${this.Url}/1`);
    
   }
-/* createUser(user: Iuser):Observable<Iuser>{
+  /*
+ createUser(user: Iuser):Observable<Iuser>{
   return this.http.post<Iuser>(`${this.Url}`,user );
 }
+
 updateUser(user: Iuser ):Observable<Iuser>{
   return this.http.put<Iuser>(`${this.Url}/${user.id}`, user);
 } */
