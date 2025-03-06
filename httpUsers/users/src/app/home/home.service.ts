@@ -20,11 +20,14 @@ return this.http.get<Iuser[]>('https://jsonplaceholder.typicode.com/users');
  
  getUser(): Observable<Iuser>{
 
-return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/10');
+return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/1');
  }
 
  createUser(user: Iuser):Observable<Iuser>{
   return this.http.post<Iuser>('https://jsonplaceholder.typicode.com/users ', user);
+}
+ updateUser(user: Iuser):Observable<Iuser>{
+  return this.http.put<Iuser>('https://jsonplaceholder.typicode.com/users/5 ', user);
 }
 
 }

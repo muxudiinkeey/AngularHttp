@@ -15,11 +15,11 @@ homeService = inject (HomeService)
 
  // users: Iuser[]= []  
   private user: Iuser = {
-    'id': 1,
-    'name': 'Axmed',
+    'id': 5,
+    'name': 'Aadan',
 
-    'email': 'ahmed@april.biz',
-    username: 'mohamoud'
+    'email': 'adad@april.biz',
+    username: 'muuse'
   }
     
  
@@ -28,7 +28,8 @@ homeService = inject (HomeService)
   ngOnInit(): void {
     this.onGetusers();
     this.onGetuser();
-    this.onCreateUser();
+   this.onCreateUser();
+   this.onUpdateUser();
   }
 
 
@@ -45,64 +46,30 @@ homeService = inject (HomeService)
   return this.homeService.getUser().subscribe(
       (response: any) => console.info(response),
       (error:any) =>console.warn(error),
-      ()=> console.log('get user  id 10')
+      ()=> console.log('get user  id 1')
     )
   }
   onCreateUser(){
   return this.homeService.createUser(this.user).subscribe(
       (response: any) => console.info(response),
       (error:any) =>console.warn(error),
-      ()=> console.log('add user id 11' )
+      ()=> console.log('add user id 6' )
+    )
+  }
+  onUpdateUser(){
+  return this.homeService.updateUser(this.user).subscribe(
+      (response: any) => console.info(response),
+      (error:any) =>console.warn(error),
+      ()=> console.log('updateUser' )
     )
   }
 
  
-   
+ 
 
+ 
+   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-/* 
-    userservice = inject (UserService)
-  
-    users: Iuser[]= []
-
-    constructor(){}
-  ngOnInit(): void {
-    this.onGetusers();
-  }
-
-    onGetusers(){
-      this.userservice.getUsers().subscribe({
-    next:(data)=>{
-      this.users = data;
-    },
-    error:(err: any)=>{
- console.log(err);
-    }
-      });
-    }
-   */
-  
   
 
 
