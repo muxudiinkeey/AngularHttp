@@ -13,12 +13,22 @@ export class HomeComponent  implements OnInit{
 
 homeService = inject (HomeService)
 
-  users: Iuser[]= []
+ // users: Iuser[]= []  
+  private user: Iuser = {
+    'id': 1,
+    'name': 'Axmed',
+
+    'email': 'ahmed@april.biz',
+    username: 'mohamoud'
+  }
+    
+ 
   
 
   ngOnInit(): void {
     this.onGetusers();
-    this.onGetuser();
+    //this.onGetuser();
+    this.onCreateUser();
   }
 
 
@@ -31,14 +41,18 @@ homeService = inject (HomeService)
   }
 
       
-    
-    
-  
   onGetuser(){
   return this.homeService.getUser().subscribe(
       (response: any) => console.info(response),
       (error:any) =>console.warn(error),
       ()=> console.log('Waa hal user')
+    )
+  }
+  onCreateUser(){
+  return this.homeService.createUser(this.user).subscribe(
+      (response: any) => console.info(response),
+      (error:any) =>console.warn(error),
+      ()=> console.log('Waxaa lagudaray ha user --createdUse id wuxuu noqonayaa 11' )
     )
   }
 
