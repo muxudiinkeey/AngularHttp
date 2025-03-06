@@ -27,7 +27,7 @@ homeService = inject (HomeService)
 
   ngOnInit(): void {
     this.onGetusers();
-    //this.onGetuser();
+    this.onGetuser();
     this.onCreateUser();
   }
 
@@ -45,14 +45,14 @@ homeService = inject (HomeService)
   return this.homeService.getUser().subscribe(
       (response: any) => console.info(response),
       (error:any) =>console.warn(error),
-      ()=> console.log('Waa hal user')
+      ()=> console.log('get user  id 10')
     )
   }
   onCreateUser(){
   return this.homeService.createUser(this.user).subscribe(
       (response: any) => console.info(response),
       (error:any) =>console.warn(error),
-      ()=> console.log('Waxaa lagudaray ha user --createdUse id wuxuu noqonayaa 11' )
+      ()=> console.log('add user id 11' )
     )
   }
 

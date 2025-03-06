@@ -20,7 +20,7 @@ return this.http.get<Iuser[]>('https://jsonplaceholder.typicode.com/users');
  
  getUser(): Observable<Iuser>{
 
-return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/2');
+return this.http.get<Iuser>('https://jsonplaceholder.typicode.com/users/10');
  }
 
  createUser(user: Iuser):Observable<Iuser>{
