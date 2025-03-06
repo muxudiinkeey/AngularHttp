@@ -23,4 +23,12 @@ export class AddUserServiceService {
     return this.http.get<Iuser>(`${this.Url}/1`);
     
    }
+
+   
+
+   
+
+   addUser(user: Iuser):Observable<Iuser>{
+    return this.http.post<Iuser>(`${this.Url}`,user );
+}
 }

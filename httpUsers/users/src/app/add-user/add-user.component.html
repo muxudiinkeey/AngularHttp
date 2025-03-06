@@ -3,20 +3,32 @@
 <div class="col-4">
     <div class="container mt-3">
 
-        <form >
+        <form [formGroup]="userForm" (ngSubmit)="onAddUser()">
             <div class="mb-3 mt-3">
                 <label  for="Name">Name</label>
-                <input type="test" class="form-control" id="name" placeholder="Enter Name" name="Name">
+                <input type="test" class="form-control"
+                 id="name" placeholder="Enter Name"
+                  name="Name"
+                   formControlName="name">
               </div>
           
           <div class="mb-3">
             <label for="userName">userName</label>
-            <input type="text" class="form-control" id="userName" placeholder="Enter userName" name="UserName">
+            <input type="text" class="form-control"
+             id="userName" 
+             placeholder="Enter userName"
+              name="UserName"
+              formControlName="userName">
           </div>
 
           <div class="mb-3 mt-3">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" class="form-control"
+             id="email"
+              placeholder="Enter email"
+               name="email"
+               formControlName="email"
+               >
           </div>
           
           <button type="submit" class="btn btn-light">Add-User</button>
