@@ -33,7 +33,7 @@ homeService = inject (HomeService)
       
     
     
-  }
+  
   onGetuser(){
   return this.homeService.getUser().subscribe(
       (response: any) => console.info(response),
@@ -65,8 +65,7 @@ homeService = inject (HomeService)
 
 
 
-function onGetuser() {
-  throw new Error('Function not implemented.');
+
 }
 /* 
     userservice = inject (UserService)
