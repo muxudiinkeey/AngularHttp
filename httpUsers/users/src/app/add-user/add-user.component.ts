@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './add-user.component.css'
 })
 export class AddUserComponent {
-userservice = inject (UserService)
+addUserService = inject (UserService)
 
   users: Iuser[]= []
 
@@ -18,10 +18,10 @@ userservice = inject (UserService)
     this.onGitUsers();
   }
   // asynk hadaad isticmaalaysid dollor users isticmaal
-   users$ = this.userservice.getUsers();
+   users$ = this.addUserService.getUsers();
 
 onGitUsers(){
-  this.userservice.getUsers().subscribe((Iuser)=>{
+  this.addUserService.getUsers().subscribe((Iuser)=>{
 
     //this.users= this.users
     this.users= Iuser;
