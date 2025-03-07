@@ -15,7 +15,7 @@ export class AddUserServiceService {
  
   //users : Iusers [] = []
  
-   getUsers(): Observable<Iuser[]>{
+ /*   getUsers(): Observable<Iuser[]>{
     return this.http.get<Iuser[]>(this.Url);
     
    }
@@ -23,12 +23,14 @@ export class AddUserServiceService {
     return this.http.get<Iuser>(`${this.Url}/1`);
     
    }
-
+ */
    
 
-   
+   addUser(user: Iuser ):Observable<Iuser>{
+    return this.http.put<Iuser>(`${this.Url}/${user.id}`, user);
+  }
 
-   addUser(user: Iuser):Observable<Iuser>{
+/*    addUser(user: Iuser):Observable<Iuser>{
     return this.http.post<Iuser>(`${this.Url}`,user );
-}
+} */
 }

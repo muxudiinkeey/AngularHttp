@@ -3,6 +3,7 @@ import { UserService } from '../users/user.service';
 import { Iuser } from '../users/user';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddUserServiceService } from './add-user-service.service';
 
 @Component({
   selector: 'app-add-user',
@@ -11,7 +12,10 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   styleUrl: './add-user.component.css'
 })
 export class AddUserComponent {
-addUserService = inject (UserService)
+
+addUserService = inject (AddUserServiceService)
+userService = inject (UserService)
+
  userForm = new FormGroup({
 
   name : new FormControl(''),
@@ -23,32 +27,37 @@ addUserService = inject (UserService)
   ngOnInit(): void {
     this.onGitUsers();
     this.onAddUser();
+    
    // this.onGitUser();
   }
   // asynk hadaad isticmaalaysid dollor users isticmaal
-   users$ = this.addUserService.getUsers();
+   users$ = this.userService.getUsers();
 
 onGitUsers(){
-  this.addUserService.getUsers().subscribe((Iuser)=>{
+  this.userService.getUsers().subscribe((Iuser)=>{
 
     //this.users= this.users
     this.users= Iuser;
     console.table(this.users);
   })
 }
-onGitUser(){
+/* onGitUser(){
   this.addUserService.getUser().subscribe((Iuser)=>{
 
     this.users= this.users
     //this.users= Iuser;
     console.log(this.users);
   })
-}
+} */
 
-onAddUser(){
-console.log(this.userForm.value);
-}
-onupdateUser(){
+ onAddUser(user: Iuser){
+this.addUserService.addUser(user).subscribe((Iuser) =>{
+  this.users= this.users;
+  console.log(this.userForm.value);
+})
 
+  
+//console.log(this.userForm.value);
 }
-}
+ 
+ }

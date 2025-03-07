@@ -12,8 +12,8 @@ export class UserParamsService {
  
   //users : Iusers [] = []
  
-   getUsers(){
+/*    getUsers(){
     return this.http.get<Iuser[]>(this.Url)
    }
- 
+  */
 }
