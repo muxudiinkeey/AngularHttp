@@ -12,7 +12,7 @@ import { Ipost } from './post';
 })
 export class AppComponent {
 
-private url='http://jsonplaceholder.typicode.com/posts';
+private url=('http://jsonplaceholder.typicode.com/posts?_limit=10');
 
 http = inject(HttpClient);
 
