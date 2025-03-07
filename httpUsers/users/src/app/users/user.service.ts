@@ -4,32 +4,17 @@ import { Iuser } from './user';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-  // http api users 
-  http = inject (HttpClient);
+  // http api users
+  http = inject(HttpClient);
 
- private Url='https://jsonplaceholder.typicode.com/users';
+  private Url = 'https://jsonplaceholder.typicode.com/users';
 
- //users : Iusers [] = []
+  //users : Iusers [] = []
 
-  getUsers(): Observable<Iuser[]>{
-   return this.http.get<Iuser[]>(`${this.Url}`);
-   
+  getUsers(): Observable<Iuser[]> {
+    return this.http.get<Iuser[]>(`${this.Url}`);
   }
-  getUser(): Observable<Iuser>{
-   return this.http.get<Iuser>(`${this.Url}/1`);
-   
-  }
-  /*
- createUser(user: Iuser):Observable<Iuser>{
-  return this.http.post<Iuser>(`${this.Url}`,user );
 }
-
-updateUser(user: Iuser ):Observable<Iuser>{
-  return this.http.put<Iuser>(`${this.Url}/${user.id}`, user);
-} */
-
-}
-    
