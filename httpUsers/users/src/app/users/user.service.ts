@@ -27,5 +27,11 @@ getuser(){
  
   return this.http.get(this.Url)
 } */
-
+  
+/* 
+  private Url = 'https://jsonplaceholder.typicode.com/users';
+  //users : Iusers [] = []
+  addUser(user: Iuser): Observable<Iuser> {
+    return this.http.put<Iuser>(`${this.Url}/${user.id}`, user);
+  } */
 }
