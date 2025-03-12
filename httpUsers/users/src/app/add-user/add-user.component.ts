@@ -12,24 +12,20 @@ import { UserService } from '../users/user.service';
 })
 export class AddUserComponent implements OnInit{
 
+  addUserservice = inject (AddUserService)
 
-apiData: Iuser[]=[]
+  users: Iuser[]= []
+
+
+
   
-addUserService = inject (AddUserService);
+  ngOnInit(): void {
+       this.addUserservice.getUsers().subscribe((res: any) =>{
+    this.users = res;
+    console.table(res)
+      }) 
+  }
 
-
-
- ngOnInit(): void {
-this.getAllData();
-
- };
-
- getAllData(){
-  this.addUserService.getData().subscribe(res =>{
- this.apiData = res;
- console.table(this.apiData)
-  })
-} 
 
 }
 

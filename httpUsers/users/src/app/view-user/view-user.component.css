@@ -1,0 +1,16 @@
+.row {
+    background-color:rgb(237, 234, 230)
+}
+
+.delete-user {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 25px;
+}
+thead {
+   color: rgb(124, 120, 120); 
+}
+
