@@ -10,11 +10,5 @@ export class AddUserServiceService {
   // http api users
   http = inject(HttpClient);
 
-  
-/* 
-  private Url = 'https://jsonplaceholder.typicode.com/users';
-  //users : Iusers [] = []
-  addUser(user: Iuser): Observable<Iuser> {
-    return this.http.put<Iuser>(`${this.Url}/${user.id}`, user);
-  } */
+
 }
