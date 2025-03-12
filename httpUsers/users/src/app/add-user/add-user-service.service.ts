@@ -7,7 +7,7 @@ import { Iuser } from '../users/user';
   providedIn: 'root',
 })
 export class AddUserServiceService {
-  // http api users
+  
   http = inject(HttpClient);
 
 
