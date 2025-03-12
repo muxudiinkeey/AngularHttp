@@ -1,4 +1,10 @@
-import { Component, inject } from '@angular/core';
+ # tilaabo tilaabo qaabka aad-user.
+ ---
+
+ ## AddUserComponen
+
+ ```t
+ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,3 +21,4 @@ export class AddUserComponent {
  
  
 }
+```
