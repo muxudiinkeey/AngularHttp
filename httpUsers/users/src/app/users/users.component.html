@@ -1,30 +1,7 @@
 
 <div class="container">
 <div  class="row">
-  <div class="col-4">
-      <div class="container mt-3">
-  
-          <form >
-              <div class="mb-3 mt-3">
-                  <label for="Name">Name</label>
-                  <input type="test" class="form-control" id="name" placeholder="Enter Name" name="Name">
-                </div>
-            
-            <div class="mb-3">
-              <label for="userName">userName</label>
-              <input type="text" class="form-control" id="userName" placeholder="Enter userName" name="UserName">
-            </div>
-  
-            <div class="mb-3 mt-3">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-            </div>
-            
-            <button type="submit" class="btn btn-light">Add-User</button>
-        <span class="delete-user">   <button type="submit" class="btn btn-light ">Delete-User</button></span>
-          </form>
-        </div>
-        </div>
+
   
   
   <div class="col-8">
@@ -36,13 +13,28 @@
         <th>email</th>
       </thead>
       <tbody>
-        @for (user of users$ | async; track user.id){
+      
+    
+  @for (user of users; track user.id){
+     <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{user.email}}</td>
+         
+        </tr>
+  }
+  obserbe laan   
+ <!--     obserble     
+  @for (user of users$ | async; track user.id){
         <tr>
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
           <td>{{ user.username }}</td>
           <td>{{user.email}}</td>
-         }
+         
+        </tr>
+  } -->
       </tbody>
     </table> 
   </div>

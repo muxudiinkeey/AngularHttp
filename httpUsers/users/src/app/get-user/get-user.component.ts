@@ -1,9 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { GetuserService } from './getuser.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-get-user',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './get-user.component.html',
   styleUrl: './get-user.component.css'
 })

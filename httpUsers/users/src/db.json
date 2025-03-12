@@ -1,0 +1,25 @@
+{
+
+    "Users" : [
+        
+        
+        {
+           "id": 1,
+           "name" :"Maryan",
+           "username": "Axmed",
+           "email": "Axmed@enail.com"
+       },
+        {
+           "id": 1,
+           "name" :"Mohamoud",
+           "username": "Aadan",
+           "email": "Aadan@enail.com"
+       },
+        {
+           "id": 1,
+           "name" :"Malyuun",
+           "username": "Xaasan",
+           "email": "xasan@enail.com"
+       }
+    ]
+}

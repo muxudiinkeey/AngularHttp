@@ -16,14 +16,26 @@ export class UsersComponent implements OnInit{
 
   users: Iuser[]= []
 
+
+
+  
   ngOnInit(): void {
-    this.onGitUsers();
+      this.userservice.getUsers().subscribe((res: any) =>{
+    this.users = res;
+    console.table(res)
+      })
   }
+ 
+/* // qaabka obserble 
+  ngOnInit(): void {
+      this.onGitUsers();
+  }
+
  users$ = this.userservice.getUsers();
-onGitUsers(){
+ onGitUsers(){
   this.userservice.getUsers().subscribe((Iuser)=>{
     this.users= this.users
   })
-}
-
+} */
+ 
 }

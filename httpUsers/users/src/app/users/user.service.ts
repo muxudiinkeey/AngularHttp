@@ -7,14 +7,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  // http api users
+
   http = inject(HttpClient);
 
   private Url = 'https://jsonplaceholder.typicode.com/users';
 
-  //users : Iusers [] = []
+  
 
   getUsers(): Observable<Iuser[]> {
     return this.http.get<Iuser[]>(`${this.Url}`);
   }
+  
+// obserble la aan
+/*   Url = ('https://jsonplaceholder.typicode.com/users/')
+  
+  http= inject(HttpClient);
+
+getuser(){
+ 
+  return this.http.get(this.Url)
+} */
+
 }
