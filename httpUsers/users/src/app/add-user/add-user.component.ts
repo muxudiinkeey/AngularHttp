@@ -37,6 +37,3 @@ this.users = this.users;
  } */
 }
 
-function getAllDate() {
-  throw new Error('Function not implemented.');
-}
