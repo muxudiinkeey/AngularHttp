@@ -26,4 +26,8 @@ this.getAllData();
  console.table(this.apiData)
   })
 } 
+
+addNewUser(){
+  
+}
 }
