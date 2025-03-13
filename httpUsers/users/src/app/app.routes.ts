@@ -6,6 +6,7 @@ import { GetUserComponent } from './get-user/get-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { CrudComponent } from './crud/crud.component';
+import { AddUserListComponent } from './add-user-list/add-user-list.component';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'users' },
@@ -14,7 +15,7 @@ export const routes: Routes = [
     { path: 'addUser', component: AddUserComponent },
     { path: 'getUser', component: GetUserComponent },
     { path: 'crud', component: CrudComponent },
-
+    { path: 'addUserList', component: AddUserListComponent },
     { path: 'updateUser', component: UpdateUserComponent},
     { path: 'viewUser', component: ViewUserComponent},
 ];

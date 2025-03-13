@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Iuser } from '../users/user';
 import { CrudService } from './crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crud',
@@ -11,8 +12,8 @@ import { CrudService } from './crud.service';
 export class CrudComponent {
 apiData: Iuser[]=[]
   
-crudService= inject (CrudService);
-
+crud= inject (CrudService);
+router = inject(Router)
 
 
  ngOnInit(): void {
@@ -21,13 +22,13 @@ this.getAllData();
  };
 
  getAllData(){
-  this.crudService.getData().subscribe(res =>{
+  this.crud.getData().subscribe(res =>{
  this.apiData = res;
  console.table(this.apiData)
   })
 } 
 
 addNewUser(){
-  
+  this.router.navigateByUrl('addUserList');
 }
 }
